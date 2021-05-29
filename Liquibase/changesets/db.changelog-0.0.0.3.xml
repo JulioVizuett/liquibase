@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet author="julioavalos" id="changelog-0.0.4">
+        <sqlFile endDelimiter="//" path="./sql/procedimiento.sql" stripComments="true" />
+        <sql>call getOneDeparment();</sql>
+    </changeSet>
+    <!-- Para crear un Changelog de una bd existente se utiliza-->
+    <!-- liquibase -/-changeLogFile="changesets/dbchangelog.xml" generateChangeLog -->
+
+    <!-- Para crear las diferencias entre bd -->
+    <!-- liquibase -/-changeLogFile="changesets/db.changelog-0.0.0.2.xml" diffChangeLog--> 
+
+</databaseChangeLog>

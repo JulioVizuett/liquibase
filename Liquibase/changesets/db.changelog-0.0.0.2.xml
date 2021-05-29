@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd">
+
+    <changeSet author="julioavalos" id="changelog-0.0.2">
+        <createTable tableName="Comercial">
+
+            <column name="Id" type="INT">
+                <constraints nullable="false" primaryKey="true"/>
+            </column>
+            <column name="Nombre" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ApellidoP" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="ApellidoM" type="VARCHAR(50)">
+                <constraints nullable="true"/>
+            </column>
+            <column name="Comision" type="float">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet author="julioavalos" id="changelog-0.0.1.1">
+        <insert tableName="Comercial">
+            <column name="Id" value="3"/>
+            <column name="Nombre" value="Julio"/>
+            <column name="ApellidoP" value="Avalos"/>
+            <column name="ApellidoM" value="Vizuett"/>
+            <column name="Comision" value="3.54"/>
+        </insert>
+    </changeSet>
+
+</databaseChangeLog> 

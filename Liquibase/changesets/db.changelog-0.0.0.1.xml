@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+    
+    <changeSet author="julioavalos" id="changelog-0.0.1">
+        <createTable tableName="Departamento">
+
+            <column name="Id" type="INT">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="PK_K_Departamento"/>
+            </column>
+            <column name="Name" type="VARCHAR(50)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="Id_Comercial" type="INT">
+                <constraints nullable="false"/>
+            </column>
+
+        </createTable>
+    </changeSet>
+
+    <changeSet author="julioavalos" id="changelog-0.0.1.1">
+        <insert tableName="Departamento">
+            <column name="Id" value="1"/>
+            <column name="Name" value="Desarrollo"/>
+            <column name="Id_Comercial" value="3"/>
+        </insert>
+    </changeSet>
+</databaseChangeLog> 

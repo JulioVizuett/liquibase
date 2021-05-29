@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<databaseChangeLog 
+  xmlns="http://www.liquibase.org/xml/ns/dbchangelog/1.9" 
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+  xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog/1.9
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-1.9.xsd"> 
+
+    <changeSet author="julioavalos" id="changelog-0.0.3">
+        <createTable tableName="prueba">
+            <column name="id" type="int"/>
+            <column name="nombre" type="varchar(36)"/>
+            <column name="apellido" type="varchar(36)"/>
+        </createTable>
+    </changeSet>
+
+    <!-- coloca un tag a la ultima version subida, el siguiente rollback regresará todo hasta esa versión -->
+    <!-- liquibase tag version1  -->
+    <!-- liquibase -/-changeLogFile="changesets/db.changelog-master.xml" rollback version1 -->
+
+</databaseChangeLog> 
